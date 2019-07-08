@@ -1,0 +1,31 @@
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+/usr/bin/ruby.ruby2.5 -r ./siteconf20190704-3461-11qj2p9.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+mini_ssl.c: In function ‘engine_init_client’:
+mini_ssl.c:220:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
+   conn->ctx = SSL_CTX_new(DTLSv1_method());
+   ^~~~
+In file included from /usr/include/openssl/e_os2.h:13:0,
+                 from /usr/include/openssl/bio.h:13,
+                 from mini_ssl.c:14:
+/usr/include/openssl/ssl.h:1650:1: note: declared here
+ DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+ ^
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20190704-3461-rftk7e/puma

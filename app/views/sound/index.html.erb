@@ -1,0 +1,35 @@
+<% if admin_signed_in? %>
+    <%= link_to 'Выйти', destroy_admin_session_path, :method => :delete %>
+<% else %>
+    <%= link_to 'Войти', new_admin_session_path %> или <%= link_to 'Зарегистрироваться', new_admin_registration_path %>
+<% end %>
+
+<div class="unobtrusive-flash-container"></div>
+<div>
+<%= simple_form_for :user, remote: true, :url => '/sound/index', :method => :post do |f| %>
+ <%= f.error_notification %>
+  <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 4, name: "request", include_blank: false, required: true} %>
+
+<div class="chained-selects">
+	<select required id="select-1" name="lang">
+		<option value="" selected>Choose language</option>
+		<option value="en-US">en-US</option>
+		<option value="es-ES">es-ES</option>
+		<option value="ru-RU">ru-RU</option>
+	</select>
+	<select required id="select-2" disabled>
+		<option value="" selected>Choose voice type</option>
+	</select>
+	<select required id="select-3" name="voicename" disabled>
+		<option value="" selected>Choose voice name</option>
+	</select>
+</div>
+
+<div id="btnSubmit" type="submit" class="btn btn-default" style="margin-top:2em;">
+  <%= f.button :submit, 'Send' %>
+<% end %>
+</div>
+</div>
+</form>
+
+<script src="/js/chained.js"></script>

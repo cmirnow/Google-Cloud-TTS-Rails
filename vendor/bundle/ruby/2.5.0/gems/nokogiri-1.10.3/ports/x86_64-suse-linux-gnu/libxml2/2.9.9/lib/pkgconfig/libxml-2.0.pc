@@ -1,0 +1,13 @@
+prefix=/home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.10.3/ports/x86_64-suse-linux-gnu/libxml2/2.9.9
+exec_prefix=${prefix}
+libdir=/home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.10.3/ports/x86_64-suse-linux-gnu/libxml2/2.9.9/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.9.9
+Description: libXML library version2.
+Requires:
+Libs: -L${libdir} -lxml2
+Libs.private:   -lz -llzma  -lm  
+Cflags: -I${includedir}/libxml2 

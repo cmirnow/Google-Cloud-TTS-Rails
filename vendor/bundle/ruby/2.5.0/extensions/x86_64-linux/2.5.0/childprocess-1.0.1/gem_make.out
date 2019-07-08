@@ -1,0 +1,5 @@
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/childprocess-1.0.1/ext
+/usr/bin/ruby.ruby2.5 mkrf_conf.rb
+
+current directory: /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/childprocess-1.0.1/ext
+/usr/bin/ruby.ruby2.5 -rrubygems /home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/gems/rake-12.3.2/exe/rake RUBYARCHDIR=/home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/extensions/x86_64-linux/2.5.0/childprocess-1.0.1 RUBYLIBDIR=/home/alex/.diskA/Rails/texttospeech/vendor/bundle/ruby/2.5.0/extensions/x86_64-linux/2.5.0/childprocess-1.0.1
