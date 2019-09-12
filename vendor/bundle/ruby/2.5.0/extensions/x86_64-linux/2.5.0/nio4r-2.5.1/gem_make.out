@@ -1,0 +1,476 @@
+current directory: /home/alex/.diskA/Rails/GitHub/texttospeech/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.1/ext/nio4r
+/usr/bin/ruby.ruby2.5 -r ./siteconf20190912-3556-nuct4p.rb extconf.rb
+checking for unistd.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/alex/.diskA/Rails/GitHub/texttospeech/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.1/ext/nio4r
+make "DESTDIR=" clean
+
+current directory: /home/alex/.diskA/Rails/GitHub/texttospeech/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.1/ext/nio4r
+make "DESTDIR="
+compiling bytebuffer.c
+compiling monitor.c
+compiling nio4r_ext.c
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:519:48: warning: "/*" within comment [-Wcomment]
+ /*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+                                                 
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:1875:31: warning: ‘ev_default_loop_ptr’ initialized and declared ‘extern’
+   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+                               ^~~~~~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:202:0,
+                 from nio4r_ext.c:7:
+../libev/ev_epoll.c: In function ‘epoll_modify’:
+../libev/ev_epoll.c:134:69: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+                                                                     ^
+../libev/ev_epoll.c:134:69: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+                                                                     ^
+../libev/ev_linuxaio.c: In function ‘linuxaio_modify’:
+../libev/ev_linuxaio.c:304:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+                                                             ^
+../libev/ev_linuxaio.c:304:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+                                                             ^
+../libev/ev_linuxaio.c: In function ‘linuxaio_parse_events’:
+../libev/ev_linuxaio.c:344:50: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+                                                  ^
+../libev/ev_linuxaio.c:344:50: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+                                                  ^
+../libev/ev_linuxaio.c: In function ‘linuxaio_poll’:
+../libev/ev_linuxaio.c:553:57: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+             assert (("libev: event loop rejected bad fd", errno != EBADF));
+                                                         ^
+../libev/ev_linuxaio.c:553:57: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+             assert (("libev: event loop rejected bad fd", errno != EBADF));
+                                                         ^
+In file included from ../libev/ev.c:2753:0,
+                 from nio4r_ext.c:7:
+../libev/ev_linuxaio.c:498:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+       if (expect_false (res < 0))
+          ^
+In file included from libev.h:9:0,
+                 from nio4r.h:11,
+                 from nio4r_ext.c:6:
+../libev/ev_linuxaio.c: In function ‘linuxaio_init’:
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:689:27: note: in definition of macro ‘ev_init’
+   ((ev_watcher *)(void *)(ev))->active  = \
+                           ^~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:690:27: note: in definition of macro ‘ev_init’
+   ((ev_watcher *)(void *)(ev))->pending = 0; \
+                           ^~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:734:73: note: in definition of macro ‘ev_set_priority’
+ # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+                                                                         ^~
+../libev/ev.h:709:51: note: in expansion of macro ‘ev_init’
+ #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:726:47: note: in definition of macro ‘ev_cb_’
+ #define ev_cb_(ev)                           (ev)->cb /* rw */
+                                               ^~
+../libev/ev.h:692:3: note: in expansion of macro ‘ev_set_cb’
+   ev_set_cb ((ev), cb_);   \
+   ^~~~~~~~~
+../libev/ev.h:709:51: note: in expansion of macro ‘ev_init’
+ #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:740:94: note: in definition of macro ‘ev_set_cb’
+ # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+                                                                                              ^~
+../libev/ev.h:709:51: note: in expansion of macro ‘ev_init’
+ #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:726:47: note: in definition of macro ‘ev_cb_’
+ #define ev_cb_(ev)                           (ev)->cb /* rw */
+                                               ^~
+../libev/ev.h:692:3: note: in expansion of macro ‘ev_set_cb’
+   ev_set_cb ((ev), cb_);   \
+   ^~~~~~~~~
+../libev/ev.h:709:51: note: in expansion of macro ‘ev_init’
+ #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:726:47: note: in definition of macro ‘ev_cb_’
+ #define ev_cb_(ev)                           (ev)->cb /* rw */
+                                               ^~
+../libev/ev.h:692:3: note: in expansion of macro ‘ev_set_cb’
+   ev_set_cb ((ev), cb_);   \
+   ^~~~~~~~~
+../libev/ev.h:709:51: note: in expansion of macro ‘ev_init’
+ #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:695:52: note: in definition of macro ‘ev_io_set’
+ #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+                                                    ^~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:695:70: note: in definition of macro ‘ev_io_set’
+ #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+                                                                      ^~
+../libev/ev_linuxaio.c:592:3: note: in expansion of macro ‘ev_io_init’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: note: in expansion of macro ‘EV_A_’
+   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev_linuxaio.c: In function ‘linuxaio_fork’:
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:695:52: note: in definition of macro ‘ev_io_set’
+ #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+                                                    ^~
+../libev/ev_linuxaio.c:636:16: note: in expansion of macro ‘EV_A_’
+   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+                ^~~~~
+../libev/ev.h:177:20: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+ # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+                    ^
+../libev/ev.h:695:70: note: in definition of macro ‘ev_io_set’
+ #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+                                                                      ^~
+../libev/ev_linuxaio.c:636:16: note: in expansion of macro ‘EV_A_’
+   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+                ^~~~~
+In file included from ../libev/ev.c:202:0,
+                 from nio4r_ext.c:7:
+../libev/ev_poll.c: In function ‘poll_poll’:
+../libev/ev_poll.c:113:75: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+                                                                           ^
+../libev/ev_poll.c:113:75: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+                                                                           ^
+../libev/ev_poll.c:121:68: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+                 assert (("libev: poll found invalid fd in poll set", 0));
+                                                                    ^
+../libev/ev_poll.c:121:68: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+                 assert (("libev: poll found invalid fd in poll set", 0));
+                                                                    ^
+../libev/ev.c: In function ‘verify_watcher’:
+../libev/ev.c:3185:49: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+                                                 ^
+../libev/ev.c:3185:49: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+                                                 ^
+../libev/ev.c:3188:59: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+                                                           ^
+../libev/ev.c:3188:59: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+                                                           ^
+../libev/ev.c: In function ‘verify_heap’:
+../libev/ev.c:3199:54: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+                                                      ^
+../libev/ev.c:3199:54: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+                                                      ^
+../libev/ev.c:3200:48: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+                                                ^
+../libev/ev.c:3200:48: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+                                                ^
+../libev/ev.c:3201:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+                                               ^
+../libev/ev.c:3201:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+                                               ^
+../libev/ev.c: In function ‘array_verify’:
+../libev/ev.c:3213:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+                                              ^
+../libev/ev.c:3213:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+                                              ^
+../libev/ev.c: In function ‘ev_verify’:
+../libev/ev.c:3231:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+                                               ^
+../libev/ev.c:3231:47: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+                                               ^
+../libev/ev.c:3244:64: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: io watcher list contains a loop", w != w2));
+                                                                ^
+../libev/ev.c:3244:64: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: io watcher list contains a loop", w != w2));
+                                                                ^
+../libev/ev.c:3248:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+                                                             ^
+../libev/ev.c:3248:61: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+                                                             ^
+../libev/ev.c:3249:65: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+                                                                 ^
+../libev/ev.c:3249:65: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+                                                                 ^
+../libev/ev.c: In function ‘timers_reify’:
+../libev/ev.c:3435:93: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+                                                                                             ^
+../libev/ev.c:3435:93: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+                                                                                             ^
+../libev/ev.c: In function ‘periodics_reify’:
+../libev/ev.c:3498:90: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+                                                                                          ^
+../libev/ev.c:3498:90: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+                                                                                          ^
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c: In function ‘ev_backend_poll’:
+../libev/ev.c:3644:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from ../libev/ev.c:202:0,
+                 from nio4r_ext.c:7:
+../libev/ev.c: In function ‘ev_run’:
+../libev/ev.c:3658:62: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+                                                              ^
+../libev/ev.c:3658:62: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+                                                              ^
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:3814:36: warning: passing argument 1 of ‘rb_thread_call_without_gvl’ from incompatible pointer type [-Wincompatible-pointer-types]
+         rb_thread_call_without_gvl(ev_backend_poll, (void *)&poll_args, RUBY_UBF_IO, 0);
+                                    ^~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:42:0,
+                 from nio4r_ext.c:7:
+/usr/include/ruby-2.5.0/ruby/thread.h:28:7: note: expected ‘void * (*)(void *)’ but argument is of type ‘VALUE (*)(void *) {aka long unsigned int (*)(void *)}’
+ void *rb_thread_call_without_gvl(void *(*func)(void *), void *data1,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:202:0,
+                 from nio4r_ext.c:7:
+../libev/ev.c:3826:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+                                                                      ^
+../libev/ev.c:3826:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+                                                                      ^
+../libev/ev.c: In function ‘ev_io_start’:
+../libev/ev.c:4001:56: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+                                                        ^
+../libev/ev.c:4001:56: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+                                                        ^
+../libev/ev.c:4002:63: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+                                                               ^
+../libev/ev.c:4002:63: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+                                                               ^
+../libev/ev.c:4014:62: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+                                                              ^
+../libev/ev.c:4014:62: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+                                                              ^
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:4016:34: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
+   fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+                        ~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../libev/ev.c:202:0,
+                 from nio4r_ext.c:7:
+../libev/ev.c: In function ‘ev_io_stop’:
+../libev/ev.c:4030:88: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+                                                                                        ^
+../libev/ev.c:4030:88: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+                                                                                        ^
+../libev/ev.c: In function ‘ev_timer_start’:
+../libev/ev.c:4054:75: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+                                                                           ^
+../libev/ev.c:4054:75: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+                                                                           ^
+../libev/ev.c: In function ‘ev_timer_stop’:
+../libev/ev.c:4083:53: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+                                                     ^
+../libev/ev.c:4083:53: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+                                                     ^
+../libev/ev.c: In function ‘ev_periodic_start’:
+../libev/ev.c:4147:78: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+                                                                              ^
+../libev/ev.c:4147:78: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+                                                                              ^
+../libev/ev.c: In function ‘ev_periodic_stop’:
+../libev/ev.c:4180:56: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+                                                        ^
+../libev/ev.c:4180:56: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+                                                        ^
+../libev/ev.c: In function ‘ev_signal_start’:
+../libev/ev.c:4219:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+                                                                      ^
+../libev/ev.c:4219:70: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+                                                                      ^
+../libev/ev.c:4222:73: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: a signal must not be attached to two different loops",
+                                                                         ^
+../libev/ev.c:4222:73: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: a signal must not be attached to two different loops",
+                                                                         ^
+../libev/ev.c: In function ‘ev_child_start’:
+../libev/ev.c:4341:74: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+                                                                          ^
+../libev/ev.c:4341:74: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+                                                                          ^
+../libev/ev.c: In function ‘ev_embed_start’:
+../libev/ev.c:4926:60: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+                                                            ^
+../libev/ev.c:4926:60: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+                                                            ^
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c: At top level:
+../libev/ev.c:5270:27: warning: "/*" within comment [-Wcomment]
+ /* EV_STAT     0x00001000 /* stat data changed */
+                            
+../libev/ev.c:5271:27: warning: "/*" within comment [-Wcomment]
+ /* EV_EMBED    0x00010000 /* embedded event loop needs sweep */
+                            
+In file included from /usr/include/ruby-2.5.0/ruby/ruby.h:29:0,
+                 from /usr/include/ruby-2.5.0/ruby.h:33,
+                 from nio4r.h:9,
+                 from nio4r_ext.c:6:
+nio4r_ext.c: In function ‘Init_nio4r_ext’:
+/usr/include/ruby-2.5.0/ruby/defines.h:197:18: warning: passing argument 1 of ‘ev_set_allocator’ from incompatible pointer type [-Wincompatible-pointer-types]
+ #define xrealloc ruby_xrealloc
+                  ^
+nio4r_ext.c:15:22: note: in expansion of macro ‘xrealloc’
+     ev_set_allocator(xrealloc);
+                      ^~~~~~~~
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:1777:1: note: expected ‘void * (*)(void *, long int)’ but argument is of type ‘void * (*)(void *, size_t) {aka void * (*)(void *, long unsigned int)}’
+ ev_set_allocator (void *(*cb)(void *ptr, long size) EV_NOEXCEPT) EV_NOEXCEPT
+ ^~~~~~~~~~~~~~~~
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c: In function ‘evpipe_write’:
+../libev/ev.c:2516:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write (evpipe [1], &counter, sizeof (uint64_t));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2528:11: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+           write (evpipe [1], &(evpipe [1]), 1);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c: In function ‘pipecb’:
+../libev/ev.c:2549:11: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+           read (evpipe [1], &counter, sizeof (uint64_t));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2563:11: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+           read (evpipe [0], &dummy, sizeof (dummy));
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compiling selector.c
+selector.c: In function ‘NIO_Selector_wakeup’:
+selector.c:484:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(selector->wakeup_writer, "\0", 1);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+linking shared-object nio4r_ext.so
+
+current directory: /home/alex/.diskA/Rails/GitHub/texttospeech/vendor/bundle/ruby/2.5.0/gems/nio4r-2.5.1/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20190912-3556-17hjcom
