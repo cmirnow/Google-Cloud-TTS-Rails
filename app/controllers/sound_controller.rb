@@ -12,12 +12,12 @@ class SoundController < ApplicationController
   end
 
   def conversion
-    audio_format = TtsConversion.index(client, synthesis_input, voice, audio_config, params[:codec])
+    audio_format = TtsConversion.index(client, synthesis_input, voice, audio, params[:codec])
     success_info(audio_format)
   end
 
   def client
-    Google::Cloud::TextToSpeech.new
+    Google::Cloud::TextToSpeech.text_to_speech
   end
 
   def synthesis_input
@@ -28,7 +28,7 @@ class SoundController < ApplicationController
     { language_code: params[:lang], name: params[:voicename] }
   end
 
-  def audio_config
+  def audio
     { audio_encoding: params[:codec] }
   end
 
