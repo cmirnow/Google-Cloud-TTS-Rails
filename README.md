@@ -11,5 +11,5 @@ Attention, this application supports SSML and two conversion formats: MP3 and WA
 
 [Description](https://masterpro.ws/how-to-convert-text-to-speech-using-google-cloud-text-to-speech-api-and-ruby) (in Russian).
 
-For Beginners. How to Start [Deploying Google-Cloud-TTS-Rails with Heroku](https://masterpro.ws/deploying-google-cloud-tts-rails-with-heroku) (in English).
+For Beginners. How to Start. [Deploying Google-Cloud-TTS-Rails with Heroku](https://masterpro.ws/deploying-google-cloud-tts-rails-with-heroku) (in English).
 
