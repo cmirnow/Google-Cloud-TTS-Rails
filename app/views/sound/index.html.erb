@@ -1,7 +1,7 @@
 <% if admin_signed_in? %>
-    <%= link_to 'Выйти', destroy_admin_session_path, :method => :delete %>
+    <%= link_to 'Log Off', destroy_admin_session_path, :method => :delete %>
 <% else %>
-    <%= link_to 'Войти', new_admin_session_path %> или <%= link_to 'Зарегистрироваться', new_admin_registration_path %>
+    <%= link_to 'Log On', new_admin_session_path %> или <%= link_to 'Sign Up', new_admin_registration_path %>
 <% end %>
 
 <div class="unobtrusive-flash-container"></div>
