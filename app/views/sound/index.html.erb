@@ -8,8 +8,9 @@
 
 <%= simple_form_for :user, remote: true, :url => '/sound/index', :method => :post do |f| %>
  <%= f.error_notification %>
-  <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 4, name: "request", include_blank: false, required: true} %>
+  <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 4, id: "body-field", name: "request", include_blank: false, required: true} %>
 
+<span id="body-count">0 characters</span>
 <div class="chained-selects">
    <select required id="select-1" name="lang">
       <option value="" selected>Choose language</option>
@@ -49,3 +50,4 @@
 </form>
 
 <script src="/js/chained.js"></script>
+<script src="/js/counter.js"></script>
