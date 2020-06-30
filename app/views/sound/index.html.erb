@@ -1,14 +1,21 @@
+<nav class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0">
+      <%= image_tag("tts-logo.png", alt: "Ruby Client for the Cloud Text-to-Speech API") %>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
 <% if admin_signed_in? %>
-    <%= link_to 'Log Off', destroy_admin_session_path, :method => :delete %>
+    <%= link_to 'Log Off', destroy_admin_session_path, :method => :delete, :class => "nav-link" %>
 <% else %>
     <%= link_to 'Log On', new_admin_session_path %> или <%= link_to 'Sign Up', new_admin_registration_path %>
 <% end %>
+        </li>
+      </ul>
+</nav>
 
 <div class="unobtrusive-flash-container"></div>
 
 <%= simple_form_for :user, remote: true, :url => '/sound/index', :method => :post do |f| %>
  <%= f.error_notification %>
-  <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 4, id: "body-field", name: "request", include_blank: false, required: true} %>
+  <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 10, id: "body-field", name: "request", include_blank: false, required: true} %>
 
 <span id="body-count">0 characters</span>
 <div class="chained-selects">
