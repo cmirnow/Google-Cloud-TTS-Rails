@@ -161,6 +161,14 @@ function generateOptions() {
 				'pl-PL-Standard-D': null
 			}
 		},
+		'uk-UA': {
+			'WaveNet': {
+				'uk-UA-WaveNet-A': null
+			},
+			'Basic': {
+				'uk-UA-Standard-A': null
+			}
+		},
 		'ru-RU': {
 			'WaveNet': {
 				'ru-RU-Wavenet-A': null,
