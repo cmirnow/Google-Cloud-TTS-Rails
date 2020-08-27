@@ -6,8 +6,8 @@ Using the power of Google Cloud Text-to-Speech API and ruby here is a simple int
 You only need key.json (API access key), put it in the root of this application. And that's really all.
 
 > Attention, this application supports SSML and two conversion formats: MP3 and WAV.
-> Languages Google Cloud TTS Rails supports:
 
+Languages Google Cloud TTS Rails supports:
 - Deutsch (Deutschland)
 - English (United States)
 - Español (España)
