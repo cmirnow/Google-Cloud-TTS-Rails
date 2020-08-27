@@ -68,38 +68,6 @@ function deactivateBoxes(s) {
 
 function generateOptions() {
 	return {
-		'en-US': {
-			'WaveNet': {
-				'en-US-WaveNet-A': null,
-				'en-US-WaveNet-B': null,
-				'en-US-WaveNet-C': null,
-				'en-US-WaveNet-D': null,
-				'en-US-WaveNet-E': null,
-				'en-US-WaveNet-F': null
-			},
-			'Basic': {
-				'en-US-Standard-B': null,
-				'en-US-Standard-C': null,
-				'en-US-Standard-D': null,
-				'en-US-Standard-E': null
-			}
-		},
-		'fr-FR': {
-			'WaveNet': {
-				'fr-FR-WaveNet-A': null,
-				'fr-FR-WaveNet-B': null,
-				'fr-FR-WaveNet-C': null,
-				'fr-FR-WaveNet-D': null,
-				'fr-FR-WaveNet-E': null
-			},
-			'Basic': {
-				'fr-FR-Standard-E': null,
-				'fr-FR-Standard-A': null,
-				'fr-FR-Standard-B': null,
-				'fr-FR-Standard-C': null,
-				'fr-FR-Standard-D': null
-			}
-		},
 		'de-DE': {
 			'WaveNet': {
 				'de-DE-WaveNet-F': null,
@@ -116,17 +84,63 @@ function generateOptions() {
 				'de-DE-Standard-F': null
 			}
 		},
+		'en-US': {
+			'WaveNet': {
+				'en-US-WaveNet-G': null,
+				'en-US-WaveNet-H': null,
+				'en-US-WaveNet-I': null,
+				'en-US-WaveNet-J': null,
+				'en-US-WaveNet-A': null,
+				'en-US-WaveNet-B': null,
+				'en-US-WaveNet-C': null,
+				'en-US-WaveNet-D': null,
+				'en-US-WaveNet-E': null,
+				'en-US-WaveNet-F': null
+			},
+			'Basic': {
+				'en-US-Standard-B': null,
+				'en-US-Standard-C': null,
+				'en-US-Standard-D': null,
+				'en-US-Standard-E': null,
+				'en-US-Standard-G': null,
+				'en-US-Standard-H': null,
+				'en-US-Standard-I': null,
+				'en-US-Standard-J': null
+			}
+		},
 		'es-ES': {
 			'Basic': {
 				'es-ES-Standard-A': null
 			}
 		},
-		'fi-FI': {
+		'fr-CA': {
 			'WaveNet': {
-				'fi-FI-WaveNet-A': null
+				'fr-CA-WaveNet-A': null,
+				'fr-CA-WaveNet-B': null,
+				'fr-CA-WaveNet-C': null,
+				'fr-CA-WaveNet-D': null
 			},
 			'Basic': {
-				'fi-FI-Standard-A': null
+				'fr-CA-Standard-A': null,
+				'fr-CA-Standard-B': null,
+				'fr-CA-Standard-C': null,
+				'fr-CA-Standard-D': null
+			}
+		},
+		'fr-FR': {
+			'WaveNet': {
+				'fr-FR-WaveNet-A': null,
+				'fr-FR-WaveNet-B': null,
+				'fr-FR-WaveNet-C': null,
+				'fr-FR-WaveNet-D': null,
+				'fr-FR-WaveNet-E': null
+			},
+			'Basic': {
+				'fr-FR-Standard-E': null,
+				'fr-FR-Standard-A': null,
+				'fr-FR-Standard-B': null,
+				'fr-FR-Standard-C': null,
+				'fr-FR-Standard-D': null
 			}
 		},
 		'nl-NL': {
@@ -161,12 +175,12 @@ function generateOptions() {
 				'pl-PL-Standard-D': null
 			}
 		},
-		'uk-UA': {
+		'fi-FI': {
 			'WaveNet': {
-				'uk-UA-WaveNet-A': null
+				'fi-FI-WaveNet-A': null
 			},
 			'Basic': {
-				'uk-UA-Standard-A': null
+				'fi-FI-Standard-A': null
 			}
 		},
 		'ru-RU': {
@@ -181,6 +195,14 @@ function generateOptions() {
 				'ru-RU-Standard-B': null,
 				'ru-RU-Standard-C': null,
 				'ru-RU-Standard-D': null
+			}
+		},
+		'uk-UA': {
+			'WaveNet': {
+				'uk-UA-WaveNet-A': null
+			},
+			'Basic': {
+				'uk-UA-Standard-A': null
 			}
 		}
 	};
