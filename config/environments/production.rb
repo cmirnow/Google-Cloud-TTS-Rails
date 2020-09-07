@@ -49,7 +49,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -88,4 +88,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'https://YOUR_HEROKU_DOMAIN.herokuapp.com' }
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :user_name            => ENV['GMAIL_USER_NAME'],
+  :password             => ENV['GMAIL_PASSWORD'],
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+  }
+  
 end
