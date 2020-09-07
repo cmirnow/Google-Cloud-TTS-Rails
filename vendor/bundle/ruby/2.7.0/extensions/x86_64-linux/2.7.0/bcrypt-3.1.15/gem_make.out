@@ -1,0 +1,24 @@
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.15/ext/mri
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20200907-24037-cknwvy.rb extconf.rb
+creating Makefile
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.15/ext/mri
+make "DESTDIR=" clean
+rm -f 
+rm -f bcrypt_ext.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.15/ext/mri
+make "DESTDIR="
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -D__SKIP_GNU    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o bcrypt_ext.o -c bcrypt_ext.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -D__SKIP_GNU    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o crypt_blowfish.o -c crypt_blowfish.c
+gcc  -D__SKIP_GNU     -c -o x86.o x86.S
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -D__SKIP_GNU    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o crypt_gensalt.o -c crypt_gensalt.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -D__SKIP_GNU    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o wrapper.o -c wrapper.c
+rm -f bcrypt_ext.so
+gcc -shared -o bcrypt_ext.so bcrypt_ext.o crypt_blowfish.o x86.o crypt_gensalt.o wrapper.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  -m64  -lruby  -lm   -lc
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.15/ext/mri
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20200907-24037-1ywursw
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20200907-24037-1ywursw
