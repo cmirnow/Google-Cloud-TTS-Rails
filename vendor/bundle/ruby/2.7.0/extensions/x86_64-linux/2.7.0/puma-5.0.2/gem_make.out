@@ -1,0 +1,32 @@
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/puma-5.0.2/ext/puma_http11
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20201014-9065-19psh4d.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+checking for DTLS_method() in openssl/ssl.h... yes
+checking for TLS_server_method() in openssl/ssl.h... yes
+checking for SSL_CTX_set_min_proto_version in openssl/ssl.h... yes
+creating Makefile
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/puma-5.0.2/ext/puma_http11
+make "DESTDIR=" clean
+rm -f 
+rm -f puma_http11.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/puma-5.0.2/ext/puma_http11
+make "DESTDIR="
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H -DHAVE_DTLS_METHOD -DHAVE_TLS_SERVER_METHOD    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o http11_parser.o -c http11_parser.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H -DHAVE_DTLS_METHOD -DHAVE_TLS_SERVER_METHOD    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o mini_ssl.o -c mini_ssl.c
+mini_ssl.c: В функции «engine_init_server»:
+mini_ssl.c:145:7: предупреждение: неиспользуемая переменная «min» [-Wunused-variable]
+  145 |   int min, ssl_options;
+      |       ^~~
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H -DHAVE_DTLS_METHOD -DHAVE_TLS_SERVER_METHOD    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o puma_http11.o -c puma_http11.c
+rm -f puma_http11.so
+gcc -shared -o puma_http11.so http11_parser.o mini_ssl.o puma_http11.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  -m64  -lruby -lssl -lcrypto  -lm   -lc
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/puma-5.0.2/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20201014-9065-1mjg0vj/puma
+exit > .sitearchdir.-.puma.time
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20201014-9065-1mjg0vj/puma

@@ -40,6 +40,7 @@ gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem 'google-cloud-text_to_speech'
 # gem 'unobtrusive_flash', '>=3'
 gem 'unobtrusive_flash', :path => 'vendor/gems/unobtrusive_flash-3.3.1'
+gem 'grpc', '1.31.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,1216 @@
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.4/ext/nio4r
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20201014-9065-t28ev5.rb extconf.rb
+checking for unistd.h... yes
+checking for linux/aio_abi.h... yes
+checking for sys/select.h... yes
+checking for port_event_t in poll.h... no
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port_event_t in port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR=" clean
+rm -f 
+rm -f nio4r_ext.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR="
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_UNISTD_H -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o bytebuffer.o -c bytebuffer.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_UNISTD_H -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o monitor.o -c monitor.c
+In file included from libev.h:7,
+                 from nio4r.h:9,
+                 from monitor.c:6:
+monitor.c: В функции «NIO_Monitor_initialize»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+monitor.c:101:5: замечание: в расширении макроса «ev_io_init»
+  101 |     ev_io_init(&monitor->ev_io, NIO_Selector_monitor_callback, FPTR_TO_FD(fptr), monitor->interests);
+      |     ^~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+monitor.c:101:5: замечание: в расширении макроса «ev_io_init»
+  101 |     ev_io_init(&monitor->ev_io, NIO_Selector_monitor_callback, FPTR_TO_FD(fptr), monitor->interests);
+      |     ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+monitor.c:101:5: замечание: в расширении макроса «ev_io_init»
+  101 |     ev_io_init(&monitor->ev_io, NIO_Selector_monitor_callback, FPTR_TO_FD(fptr), monitor->interests);
+      |     ^~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+monitor.c:101:5: замечание: в расширении макроса «ev_io_init»
+  101 |     ev_io_init(&monitor->ev_io, NIO_Selector_monitor_callback, FPTR_TO_FD(fptr), monitor->interests);
+      |     ^~~~~~~~~~
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_UNISTD_H -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o nio4r_ext.o -c nio4r_ext.c
+In file included from nio4r_ext.c:6:
+../libev/ev.c:511:48: предупреждение: «/*» внутри комментария [-Wcomment]
+  511 | /*#define MIN_INTERVAL  0.00000095367431640625 /* 1/2**20, good till 2200 */
+      |                                                 
+In file included from nio4r_ext.c:6:
+../libev/ev.c:1867:31: предупреждение: «extern» декларация «ev_default_loop_ptr» с инициализацией
+ 1867 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «evpipe_init»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2438:8: замечание: в расширении макроса «ev_is_active»
+ 2438 |   if (!ev_is_active (&pipe_w))
+      |        ^~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev_epoll.c: В функции «epoll_modify»:
+../libev/ev_epoll.c:134:69: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  134 |     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+      |                                                                     ^
+../libev/ev_epoll.c:134:69: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  134 |     assert (("libev: I/O watcher with invalid fd found in epoll_ctl", errno != EBADF && errno != ELOOP && errno != EINVAL));
+      |                                                                     ^
+../libev/ev_linuxaio.c: В функции «linuxaio_modify»:
+../libev/ev_linuxaio.c:304:61: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  304 |       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+      |                                                             ^
+../libev/ev_linuxaio.c:304:61: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  304 |       assert (("libev: linuxaio unexpected io_cancel failed", errno == EINPROGRESS));
+      |                                                             ^
+../libev/ev_linuxaio.c: В функции «linuxaio_parse_events»:
+../libev/ev_linuxaio.c:344:50: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  344 |       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+      |                                                  ^
+../libev/ev_linuxaio.c:344:50: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  344 |       assert (("libev: iocb fd must be in-bounds", fd >= 0 && fd < anfdmax));
+      |                                                  ^
+../libev/ev_linuxaio.c: В функции «linuxaio_poll»:
+../libev/ev_linuxaio.c:553:57: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  553 |             assert (("libev: event loop rejected bad fd", errno != EBADF));
+      |                                                         ^
+../libev/ev_linuxaio.c:553:57: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  553 |             assert (("libev: event loop rejected bad fd", errno != EBADF));
+      |                                                         ^
+In file included from ../libev/ev.c:2745,
+                 from nio4r_ext.c:6:
+../libev/ev_linuxaio.c:498:10: предупреждение: используйте фигурные скобки во избежание неоднозначной трактовки «else» [-Wdangling-else]
+  498 |       if (expect_false (res < 0))
+      |          ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev_linuxaio.c: В функции «linuxaio_init»:
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:689:27: замечание: в определении макроса «ev_init»
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |                           ^~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:690:27: замечание: в определении макроса «ev_init»
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |                           ^~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:734:73: замечание: в определении макроса «ev_set_priority»
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                                                         ^~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: замечание: в определении макроса «ev_cb_»
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:740:94: замечание: в определении макроса «ev_set_cb»
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                                              ^~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: замечание: в определении макроса «ev_cb_»
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:726:47: замечание: в определении макроса «ev_cb_»
+  726 | #define ev_cb_(ev)                           (ev)->cb /* rw */
+      |                                               ^~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:52: замечание: в определении макроса «ev_io_set»
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                    ^~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:70: замечание: в определении макроса «ev_io_set»
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                                      ^~
+../libev/ev_linuxaio.c:592:3: замечание: в расширении макроса «ev_io_init»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |   ^~~~~~~~~~
+../libev/ev_linuxaio.c:592:16: замечание: в расширении макроса «EV_A_»
+  592 |   ev_io_init  (EV_A_ &linuxaio_epoll_w, linuxaio_epoll_cb, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev_linuxaio.c:593:3: замечание: в расширении макроса «ev_set_priority»
+  593 |   ev_set_priority (&linuxaio_epoll_w, EV_MAXPRI);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev_linuxaio.c: В функции «linuxaio_fork»:
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:52: замечание: в определении макроса «ev_io_set»
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                    ^~
+../libev/ev_linuxaio.c:636:16: замечание: в расширении макроса «EV_A_»
+  636 |   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+      |                ^~~~~
+../libev/ev.h:177:20: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  177 | # define EV_A_ EV_A,                              /* a loop as first of multiple arguments */
+      |                    ^
+../libev/ev.h:695:70: замечание: в определении макроса «ev_io_set»
+  695 | #define ev_io_set(ev,fd_,events_)            do { (ev)->fd = (fd_); (ev)->events = (events_) | EV__IOFDSET; } while (0)
+      |                                                                      ^~
+../libev/ev_linuxaio.c:636:16: замечание: в расширении макроса «EV_A_»
+  636 |   ev_io_set   (EV_A_ &linuxaio_epoll_w, backend_fd, EV_READ);
+      |                ^~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev_poll.c: В функции «poll_poll»:
+../libev/ev_poll.c:113:75: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  113 |         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+      |                                                                           ^
+../libev/ev_poll.c:113:75: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  113 |         assert (("libev: poll returned illegal result, broken BSD kernel?", p < polls + pollcnt));
+      |                                                                           ^
+../libev/ev_poll.c:121:68: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  121 |                 assert (("libev: poll found invalid fd in poll set", 0));
+      |                                                                    ^
+../libev/ev_poll.c:121:68: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+  121 |                 assert (("libev: poll found invalid fd in poll set", 0));
+      |                                                                    ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «loop_init»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:2989:7: замечание: в расширении макроса «ev_prepare_init»
+ 2989 |       ev_prepare_init (&pending_w, pendingcb);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:2989:7: замечание: в расширении макроса «ev_prepare_init»
+ 2989 |       ev_prepare_init (&pending_w, pendingcb);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:2989:7: замечание: в расширении макроса «ev_prepare_init»
+ 2989 |       ev_prepare_init (&pending_w, pendingcb);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:2989:7: замечание: в расширении макроса «ev_prepare_init»
+ 2989 |       ev_prepare_init (&pending_w, pendingcb);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2992:7: замечание: в расширении макроса «ev_init»
+ 2992 |       ev_init (&pipe_w, pipecb);
+      |       ^~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2992:7: замечание: в расширении макроса «ev_init»
+ 2992 |       ev_init (&pipe_w, pipecb);
+      |       ^~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.c:2992:7: замечание: в расширении макроса «ev_init»
+ 2992 |       ev_init (&pipe_w, pipecb);
+      |       ^~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.c:2992:7: замечание: в расширении макроса «ev_init»
+ 2992 |       ev_init (&pipe_w, pipecb);
+      |       ^~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2993:7: замечание: в расширении макроса «ev_set_priority»
+ 2993 |       ev_set_priority (&pipe_w, EV_MAXPRI);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.c: В функции «ev_loop_destroy»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3021:36: замечание: в расширении макроса «ev_is_active»
+ 3021 |   if (ev_is_default_loop (EV_A) && ev_is_active (&childev))
+      |                                    ^~~~~~~~~~~~
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3028:7: замечание: в расширении макроса «ev_is_active»
+ 3028 |   if (ev_is_active (&pipe_w))
+      |       ^~~~~~~~~~~~
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3038:7: замечание: в расширении макроса «ev_is_active»
+ 3038 |   if (ev_is_active (&sigfd_w))
+      |       ^~~~~~~~~~~~
+../libev/ev.c: В функции «loop_fork»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3137:7: замечание: в расширении макроса «ev_is_active»
+ 3137 |   if (ev_is_active (&pipe_w) && postfork != 2)
+      |       ^~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «verify_watcher»:
+../libev/ev.c:3181:49: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3181 |   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+      |                                                 ^
+../libev/ev.c:3181:49: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3181 |   assert (("libev: watcher has invalid priority", ABSPRI (w) >= 0 && ABSPRI (w) < NUMPRI));
+      |                                                 ^
+../libev/ev.c:3184:59: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3184 |     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+      |                                                           ^
+../libev/ev.c:3184:59: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3184 |     assert (("libev: pending watcher not on pending queue", pendings [ABSPRI (w)][w->pending - 1].w == w));
+      |                                                           ^
+../libev/ev.c: В функции «verify_heap»:
+../libev/ev.c:3195:54: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3195 |       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+      |                                                      ^
+../libev/ev.c:3195:54: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3195 |       assert (("libev: active index mismatch in heap", ev_active (ANHE_w (heap [i])) == i));
+      |                                                      ^
+../libev/ev.c:3196:48: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3196 |       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+      |                                                ^
+../libev/ev.c:3196:48: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3196 |       assert (("libev: heap condition violated", i == HEAP0 || ANHE_at (heap [HPARENT (i)]) <= ANHE_at (heap [i])));
+      |                                                ^
+../libev/ev.c:3197:47: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3197 |       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+      |                                               ^
+../libev/ev.c:3197:47: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3197 |       assert (("libev: heap at cache mismatch", ANHE_at (heap [i]) == ev_at (ANHE_w (heap [i]))));
+      |                                               ^
+../libev/ev.c: В функции «array_verify»:
+../libev/ev.c:3209:46: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3209 |       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+      |                                              ^
+../libev/ev.c:3209:46: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3209 |       assert (("libev: active index mismatch", ev_active (ws [cnt]) == cnt + 1));
+      |                                              ^
+../libev/ev.c: В функции «ev_verify»:
+../libev/ev.c:3227:47: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3227 |     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+      |                                               ^
+../libev/ev.c:3227:47: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3227 |     assert (("libev: negative fd in fdchanges", fdchanges [i] >= 0));
+      |                                               ^
+../libev/ev.c:3240:64: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3240 |               assert (("libev: io watcher list contains a loop", w != w2));
+      |                                                                ^
+../libev/ev.c:3240:64: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3240 |               assert (("libev: io watcher list contains a loop", w != w2));
+      |                                                                ^
+../libev/ev.c:3244:61: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3244 |           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+      |                                                             ^
+../libev/ev.c:3244:61: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3244 |           assert (("libev: inactive fd watcher on anfd list", ev_active (w) == 1));
+      |                                                             ^
+../libev/ev.c:3245:65: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3245 |           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+      |                                                                 ^
+../libev/ev.c:3245:65: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3245 |           assert (("libev: fd mismatch between watcher and anfd", ((ev_io *)w)->fd == i));
+      |                                                                 ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «ev_default_loop»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:712:51: замечание: в расширении макроса «ev_init»
+  712 | #define ev_signal_init(ev,cb,signum)         do { ev_init ((ev), (cb)); ev_signal_set ((ev), (signum)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:3323:11: замечание: в расширении макроса «ev_signal_init»
+ 3323 |           ev_signal_init (&childev, childcb, SIGCHLD);
+      |           ^~~~~~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:712:51: замечание: в расширении макроса «ev_init»
+  712 | #define ev_signal_init(ev,cb,signum)         do { ev_init ((ev), (cb)); ev_signal_set ((ev), (signum)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:3323:11: замечание: в расширении макроса «ev_signal_init»
+ 3323 |           ev_signal_init (&childev, childcb, SIGCHLD);
+      |           ^~~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:712:51: замечание: в расширении макроса «ev_init»
+  712 | #define ev_signal_init(ev,cb,signum)         do { ev_init ((ev), (cb)); ev_signal_set ((ev), (signum)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:3323:11: замечание: в расширении макроса «ev_signal_init»
+ 3323 |           ev_signal_init (&childev, childcb, SIGCHLD);
+      |           ^~~~~~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:712:51: замечание: в расширении макроса «ev_init»
+  712 | #define ev_signal_init(ev,cb,signum)         do { ev_init ((ev), (cb)); ev_signal_set ((ev), (signum)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:3323:11: замечание: в расширении макроса «ev_signal_init»
+ 3323 |           ev_signal_init (&childev, childcb, SIGCHLD);
+      |           ^~~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3324:11: замечание: в расширении макроса «ev_set_priority»
+ 3324 |           ev_set_priority (&childev, EV_MAXPRI);
+      |           ^~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «timers_reify»:
+../libev/ev.c:3431:93: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3431 |               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+      |                                                                                             ^
+../libev/ev.c:3431:93: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3431 |               assert (("libev: negative ev_timer repeat value found while processing timers", w->repeat > 0.));
+      |                                                                                             ^
+../libev/ev.c: В функции «periodics_reify»:
+../libev/ev.c:3494:90: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3494 |               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+      |                                                                                          ^
+../libev/ev.c:3494:90: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3494 |               assert (("libev: ev_periodic reschedule callback returned time in the past", ev_at (w) >= ev_rt_now));
+      |                                                                                          ^
+../libev/ev.c: В функции «ev_run»:
+../libev/ev.c:3656:62: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3656 |   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+      |                                                              ^
+../libev/ev.c:3656:62: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3656 |   assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+      |                                                              ^
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3824:72: замечание: в расширении макроса «ev_is_active»
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                        ^~~~~~~~~~~~
+../libev/ev.c:3824:70: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                      ^
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:3824:72: замечание: в расширении макроса «ev_is_active»
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                        ^~~~~~~~~~~~
+../libev/ev.c:3824:70: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3824 |             assert (("libev: pipe_w not active, but pipe not written", ev_is_active (&pipe_w)));
+      |                                                                      ^
+../libev/ev.c: В функции «ev_io_start»:
+../libev/ev.c:3999:56: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3999 |   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+      |                                                        ^
+../libev/ev.c:3999:56: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 3999 |   assert (("libev: ev_io_start called with negative fd", fd >= 0));
+      |                                                        ^
+../libev/ev.c:4000:63: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4000 |   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+      |                                                               ^
+../libev/ev.c:4000:63: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4000 |   assert (("libev: ev_io_start called with illegal event mask", !(w->events & ~(EV__IOFDSET | EV_READ | EV_WRITE))));
+      |                                                               ^
+../libev/ev.c:4012:62: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4012 |   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+      |                                                              ^
+../libev/ev.c:4012:62: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4012 |   assert (("libev: ev_io_start called with corrupted watcher", ((WL)w)->next != (WL)w));
+      |                                                              ^
+In file included from nio4r_ext.c:6:
+../libev/ev.c:4014:34: предупреждение: рекомендуется заключить в скобки арифметические операции в операнде «|» [-Wparentheses]
+ 4014 |   fd_change (EV_A_ fd, w->events & EV__IOFDSET | EV_ANFD_REIFY);
+      |                        ~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «ev_io_stop»:
+../libev/ev.c:4028:88: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4028 |   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+      |                                                                                        ^
+../libev/ev.c:4028:88: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4028 |   assert (("libev: ev_io_stop called with illegal fd (must stay constant after start!)", w->fd >= 0 && w->fd < anfdmax));
+      |                                                                                        ^
+../libev/ev.c: В функции «ev_timer_start»:
+../libev/ev.c:4052:75: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4052 |   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+      |                                                                           ^
+../libev/ev.c:4052:75: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4052 |   assert (("libev: ev_timer_start called with negative timer repeat value", w->repeat >= 0.));
+      |                                                                           ^
+../libev/ev.c: В функции «ev_timer_stop»:
+../libev/ev.c:4081:53: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4081 |     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+      |                                                     ^
+../libev/ev.c:4081:53: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4081 |     assert (("libev: internal timer heap corruption", ANHE_w (timers [active]) == (WT)w));
+      |                                                     ^
+../libev/ev.c: В функции «ev_periodic_start»:
+../libev/ev.c:4145:78: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4145 |       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+      |                                                                              ^
+../libev/ev.c:4145:78: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4145 |       assert (("libev: ev_periodic_start called with negative interval value", w->interval >= 0.));
+      |                                                                              ^
+../libev/ev.c: В функции «ev_periodic_stop»:
+../libev/ev.c:4178:56: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4178 |     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+      |                                                        ^
+../libev/ev.c:4178:56: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4178 |     assert (("libev: internal periodic heap corruption", ANHE_w (periodics [active]) == (WT)w));
+      |                                                        ^
+../libev/ev.c: В функции «ev_signal_start»:
+../libev/ev.c:4217:70: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4217 |   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+      |                                                                      ^
+../libev/ev.c:4217:70: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4217 |   assert (("libev: ev_signal_start called with illegal signal number", w->signum > 0 && w->signum < EV_NSIG));
+      |                                                                      ^
+../libev/ev.c:4220:73: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4220 |   assert (("libev: a signal must not be attached to two different loops",
+      |                                                                         ^
+../libev/ev.c:4220:73: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4220 |   assert (("libev: a signal must not be attached to two different loops",
+      |                                                                         ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4242:11: замечание: в расширении макроса «ev_io_init»
+ 4242 |           ev_io_init (&sigfd_w, sigfdcb, sigfd, EV_READ);
+      |           ^~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4242:11: замечание: в расширении макроса «ev_io_init»
+ 4242 |           ev_io_init (&sigfd_w, sigfdcb, sigfd, EV_READ);
+      |           ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4242:11: замечание: в расширении макроса «ev_io_init»
+ 4242 |           ev_io_init (&sigfd_w, sigfdcb, sigfd, EV_READ);
+      |           ^~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4242:11: замечание: в расширении макроса «ev_io_init»
+ 4242 |           ev_io_init (&sigfd_w, sigfdcb, sigfd, EV_READ);
+      |           ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4243:11: замечание: в расширении макроса «ev_set_priority»
+ 4243 |           ev_set_priority (&sigfd_w, EV_MAXPRI);
+      |           ^~~~~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «ev_child_start»:
+../libev/ev.c:4339:74: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4339 |   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+      |                                                                          ^
+../libev/ev.c:4339:74: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4339 |   assert (("libev: child watchers are only supported in the default loop", loop == ev_default_loop_ptr));
+      |                                                                          ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «infy_add»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4457:7: замечание: в расширении макроса «ev_is_active»
+ 4457 |   if (ev_is_active (&w->timer)) ev_ref (EV_A);
+      |       ^~~~~~~~~~~~
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4459:7: замечание: в расширении макроса «ev_is_active»
+ 4459 |   if (ev_is_active (&w->timer)) ev_unref (EV_A);
+      |       ^~~~~~~~~~~~
+../libev/ev.c: В функции «infy_init»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4566:7: замечание: в расширении макроса «ev_io_init»
+ 4566 |       ev_io_init (&fs_w, infy_cb, fs_fd, EV_READ);
+      |       ^~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4566:7: замечание: в расширении макроса «ev_io_init»
+ 4566 |       ev_io_init (&fs_w, infy_cb, fs_fd, EV_READ);
+      |       ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4566:7: замечание: в расширении макроса «ev_io_init»
+ 4566 |       ev_io_init (&fs_w, infy_cb, fs_fd, EV_READ);
+      |       ^~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4566:7: замечание: в расширении макроса «ev_io_init»
+ 4566 |       ev_io_init (&fs_w, infy_cb, fs_fd, EV_READ);
+      |       ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4567:7: замечание: в расширении макроса «ev_set_priority»
+ 4567 |       ev_set_priority (&fs_w, EV_MAXPRI);
+      |       ^~~~~~~~~~~~~~~
+../libev/ev.c: В функции «infy_fork»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4611:19: замечание: в расширении макроса «ev_is_active»
+ 4611 |               if (ev_is_active (&w->timer)) ev_ref (EV_A);
+      |                   ^~~~~~~~~~~~
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4613:19: замечание: в расширении макроса «ev_is_active»
+ 4613 |               if (ev_is_active (&w->timer)) ev_unref (EV_A);
+      |                   ^~~~~~~~~~~~
+../libev/ev.c: В функции «ev_stat_start»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:710:51: замечание: в расширении макроса «ev_init»
+  710 | #define ev_timer_init(ev,cb,after,repeat)    do { ev_init ((ev), (cb)); ev_timer_set ((ev),(after),(repeat)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4688:3: замечание: в расширении макроса «ev_timer_init»
+ 4688 |   ev_timer_init (&w->timer, stat_timer_cb, 0., w->interval ? w->interval : DEF_STAT_INTERVAL);
+      |   ^~~~~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:710:51: замечание: в расширении макроса «ev_init»
+  710 | #define ev_timer_init(ev,cb,after,repeat)    do { ev_init ((ev), (cb)); ev_timer_set ((ev),(after),(repeat)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4688:3: замечание: в расширении макроса «ev_timer_init»
+ 4688 |   ev_timer_init (&w->timer, stat_timer_cb, 0., w->interval ? w->interval : DEF_STAT_INTERVAL);
+      |   ^~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:710:51: замечание: в расширении макроса «ev_init»
+  710 | #define ev_timer_init(ev,cb,after,repeat)    do { ev_init ((ev), (cb)); ev_timer_set ((ev),(after),(repeat)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4688:3: замечание: в расширении макроса «ev_timer_init»
+ 4688 |   ev_timer_init (&w->timer, stat_timer_cb, 0., w->interval ? w->interval : DEF_STAT_INTERVAL);
+      |   ^~~~~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:710:51: замечание: в расширении макроса «ev_init»
+  710 | #define ev_timer_init(ev,cb,after,repeat)    do { ev_init ((ev), (cb)); ev_timer_set ((ev),(after),(repeat)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4688:3: замечание: в расширении макроса «ev_timer_init»
+ 4688 |   ev_timer_init (&w->timer, stat_timer_cb, 0., w->interval ? w->interval : DEF_STAT_INTERVAL);
+      |   ^~~~~~~~~~~~~
+../libev/ev.h:696:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  696 | #define ev_timer_set(ev,after_,repeat_)      do { ((ev_watcher_time *)(ev))->at = (after_); (ev)->repeat = (repeat_); } while (0)
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:710:73: замечание: в расширении макроса «ev_timer_set»
+  710 | #define ev_timer_init(ev,cb,after,repeat)    do { ev_init ((ev), (cb)); ev_timer_set ((ev),(after),(repeat)); } while (0)
+      |                                                                         ^~~~~~~~~~~~
+../libev/ev.c:4688:3: замечание: в расширении макроса «ev_timer_init»
+ 4688 |   ev_timer_init (&w->timer, stat_timer_cb, 0., w->interval ? w->interval : DEF_STAT_INTERVAL);
+      |   ^~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4689:3: замечание: в расширении макроса «ev_set_priority»
+ 4689 |   ev_set_priority (&w->timer, ev_priority (w));
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.c: В функции «ev_stat_stop»:
+../libev/ev.h:724:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  724 | #define ev_is_active(ev)                     (0 + ((ev_watcher *)(void *)(ev))->active) /* ro, true when the watcher has been started */
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4721:7: замечание: в расширении макроса «ev_is_active»
+ 4721 |   if (ev_is_active (&w->timer))
+      |       ^~~~~~~~~~~~
+In file included from ../libev/ev.c:202,
+                 from nio4r_ext.c:6:
+../libev/ev.c: В функции «ev_embed_start»:
+../libev/ev.c:4924:60: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4924 |     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+      |                                                            ^
+../libev/ev.c:4924:60: предупреждение: левый операнд операции `запятая' не имеет побочных эффектов [-Wunused-value]
+ 4924 |     assert (("libev: loop to be embedded is not embeddable", backend & ev_embeddable_backends ()));
+      |                                                            ^
+In file included from ../libev/ev.c:213,
+                 from nio4r_ext.c:6:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4925:5: замечание: в расширении макроса «ev_io_init»
+ 4925 |     ev_io_init (&w->io, embed_io_cb, backend_fd, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4925:5: замечание: в расширении макроса «ev_io_init»
+ 4925 |     ev_io_init (&w->io, embed_io_cb, backend_fd, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4925:5: замечание: в расширении макроса «ev_io_init»
+ 4925 |     ev_io_init (&w->io, embed_io_cb, backend_fd, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4925:5: замечание: в расширении макроса «ev_io_init»
+ 4925 |     ev_io_init (&w->io, embed_io_cb, backend_fd, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4930:3: замечание: в расширении макроса «ev_set_priority»
+ 4930 |   ev_set_priority (&w->io, ev_priority (w));
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4933:3: замечание: в расширении макроса «ev_prepare_init»
+ 4933 |   ev_prepare_init (&w->prepare, embed_prepare_cb);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4933:3: замечание: в расширении макроса «ev_prepare_init»
+ 4933 |   ev_prepare_init (&w->prepare, embed_prepare_cb);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4933:3: замечание: в расширении макроса «ev_prepare_init»
+ 4933 |   ev_prepare_init (&w->prepare, embed_prepare_cb);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:716:51: замечание: в расширении макроса «ev_init»
+  716 | #define ev_prepare_init(ev,cb)               do { ev_init ((ev), (cb)); ev_prepare_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4933:3: замечание: в расширении макроса «ev_prepare_init»
+ 4933 |   ev_prepare_init (&w->prepare, embed_prepare_cb);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:4934:3: замечание: в расширении макроса «ev_set_priority»
+ 4934 |   ev_set_priority (&w->prepare, EV_MINPRI);
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:719:51: замечание: в расширении макроса «ev_init»
+  719 | #define ev_fork_init(ev,cb)                  do { ev_init ((ev), (cb)); ev_fork_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4937:3: замечание: в расширении макроса «ev_fork_init»
+ 4937 |   ev_fork_init (&w->fork, embed_fork_cb);
+      |   ^~~~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:719:51: замечание: в расширении макроса «ev_init»
+  719 | #define ev_fork_init(ev,cb)                  do { ev_init ((ev), (cb)); ev_fork_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4937:3: замечание: в расширении макроса «ev_fork_init»
+ 4937 |   ev_fork_init (&w->fork, embed_fork_cb);
+      |   ^~~~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:719:51: замечание: в расширении макроса «ev_init»
+  719 | #define ev_fork_init(ev,cb)                  do { ev_init ((ev), (cb)); ev_fork_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4937:3: замечание: в расширении макроса «ev_fork_init»
+ 4937 |   ev_fork_init (&w->fork, embed_fork_cb);
+      |   ^~~~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:719:51: замечание: в расширении макроса «ev_init»
+  719 | #define ev_fork_init(ev,cb)                  do { ev_init ((ev), (cb)); ev_fork_set ((ev)); } while (0)
+      |                                                   ^~~~~~~
+../libev/ev.c:4937:3: замечание: в расширении макроса «ev_fork_init»
+ 4937 |   ev_fork_init (&w->fork, embed_fork_cb);
+      |   ^~~~~~~~~~~~
+../libev/ev.c: В функции «ev_once»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:5141:3: замечание: в расширении макроса «ev_init»
+ 5141 |   ev_init (&once->io, once_cb_io);
+      |   ^~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:5141:3: замечание: в расширении макроса «ev_init»
+ 5141 |   ev_init (&once->io, once_cb_io);
+      |   ^~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.c:5141:3: замечание: в расширении макроса «ev_init»
+ 5141 |   ev_init (&once->io, once_cb_io);
+      |   ^~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.c:5141:3: замечание: в расширении макроса «ev_init»
+ 5141 |   ev_init (&once->io, once_cb_io);
+      |   ^~~~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:5148:3: замечание: в расширении макроса «ev_init»
+ 5148 |   ev_init (&once->to, once_cb_to);
+      |   ^~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:5148:3: замечание: в расширении макроса «ev_init»
+ 5148 |   ev_init (&once->to, once_cb_to);
+      |   ^~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.c:5148:3: замечание: в расширении макроса «ev_init»
+ 5148 |   ev_init (&once->to, once_cb_to);
+      |   ^~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.c:5148:3: замечание: в расширении макроса «ev_init»
+ 5148 |   ev_init (&once->to, once_cb_to);
+      |   ^~~~~~~
+../libev/ev.h:696:52: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  696 | #define ev_timer_set(ev,after_,repeat_)      do { ((ev_watcher_time *)(ev))->at = (after_); (ev)->repeat = (repeat_); } while (0)
+      |                                                   ~^~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:5151:7: замечание: в расширении макроса «ev_timer_set»
+ 5151 |       ev_timer_set (&once->to, timeout, 0.);
+      |       ^~~~~~~~~~~~
+In file included from nio4r_ext.c:6:
+../libev/ev.c: На верхнем уровне:
+../libev/ev.c:5268:27: предупреждение: «/*» внутри комментария [-Wcomment]
+ 5268 | /* EV_STAT     0x00001000 /* stat data changed */
+      |                            
+../libev/ev.c:5269:27: предупреждение: «/*» внутри комментария [-Wcomment]
+ 5269 | /* EV_EMBED    0x00010000 /* embedded event loop needs sweep */
+      |                            
+In file included from nio4r_ext.c:6:
+../libev/ev.c: В функции «evpipe_write»:
+../libev/ev.c:2508:11: предупреждение: ignoring return value of «write» declared with attribute «warn_unused_result» [-Wunused-result]
+ 2508 |           write (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2520:11: предупреждение: ignoring return value of «write» declared with attribute «warn_unused_result» [-Wunused-result]
+ 2520 |           write (evpipe [1], &(evpipe [1]), 1);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c: В функции «pipecb»:
+../libev/ev.c:2541:11: предупреждение: ignoring return value of «read» declared with attribute «warn_unused_result» [-Wunused-result]
+ 2541 |           read (evpipe [1], &counter, sizeof (uint64_t));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.c:2555:11: предупреждение: ignoring return value of «read» declared with attribute «warn_unused_result» [-Wunused-result]
+ 2555 |           read (evpipe [0], &dummy, sizeof (dummy));
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_UNISTD_H -DHAVE_LINUX_AIO_ABI_H -DEV_USE_LINUXAIO -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_SYS_EPOLL_H -DEV_USE_EPOLL -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -DEV_STANDALONE    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o selector.o -c selector.c
+In file included from libev.h:7,
+                 from nio4r.h:9,
+                 from selector.c:6:
+selector.c: В функции «NIO_Selector_allocate»:
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+selector.c:112:5: замечание: в расширении макроса «ev_init»
+  112 |     ev_init(&selector->timer, NIO_Selector_timeout_callback);
+      |     ^~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+selector.c:112:5: замечание: в расширении макроса «ev_init»
+  112 |     ev_init(&selector->timer, NIO_Selector_timeout_callback);
+      |     ^~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+selector.c:112:5: замечание: в расширении макроса «ev_init»
+  112 |     ev_init(&selector->timer, NIO_Selector_timeout_callback);
+      |     ^~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+selector.c:112:5: замечание: в расширении макроса «ev_init»
+  112 |     ev_init(&selector->timer, NIO_Selector_timeout_callback);
+      |     ^~~~~~~
+../libev/ev.h:689:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  689 |   ((ev_watcher *)(void *)(ev))->active  = \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+selector.c:117:5: замечание: в расширении макроса «ev_io_init»
+  117 |     ev_io_init(&selector->wakeup, NIO_Selector_wakeup_callback, selector->wakeup_reader, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:690:4: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  690 |   ((ev_watcher *)(void *)(ev))->pending = 0; \
+      |   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+selector.c:117:5: замечание: в расширении макроса «ev_io_init»
+  117 |     ev_io_init(&selector->wakeup, NIO_Selector_wakeup_callback, selector->wakeup_reader, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:734:50: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  734 | # define ev_set_priority(ev,pri)             (   (ev_watcher *)(void *)(ev))->priority = (pri)
+      |                                              ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../libev/ev.h:691:3: замечание: в расширении макроса «ev_set_priority»
+  691 |   ev_set_priority ((ev), 0);   \
+      |   ^~~~~~~~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+selector.c:117:5: замечание: в расширении макроса «ev_io_init»
+  117 |     ev_io_init(&selector->wakeup, NIO_Selector_wakeup_callback, selector->wakeup_reader, EV_READ);
+      |     ^~~~~~~~~~
+../libev/ev.h:740:79: предупреждение: доступ по указателю с приведением типа нарушает правила перекрытия объектов в памяти [-Wstrict-aliasing]
+  740 | # define ev_set_cb(ev,cb_)                   (ev_cb_ (ev) = (cb_), memmove (&((ev_watcher *)(ev))->cb, &ev_cb_ (ev), sizeof (ev_cb_ (ev))))
+      |                                                                              ~^~~~~~~~~~~~~~~~~~~
+../libev/ev.h:692:3: замечание: в расширении макроса «ev_set_cb»
+  692 |   ev_set_cb ((ev), cb_);   \
+      |   ^~~~~~~~~
+../libev/ev.h:709:51: замечание: в расширении макроса «ev_init»
+  709 | #define ev_io_init(ev,cb,fd,events)          do { ev_init ((ev), (cb)); ev_io_set ((ev),(fd),(events)); } while (0)
+      |                                                   ^~~~~~~
+selector.c:117:5: замечание: в расширении макроса «ev_io_init»
+  117 |     ev_io_init(&selector->wakeup, NIO_Selector_wakeup_callback, selector->wakeup_reader, EV_READ);
+      |     ^~~~~~~~~~
+selector.c: В функции «NIO_Selector_synchronize»:
+selector.c:285:26: предупреждение: в передаче аргумента 1 «rb_ensure»: несовместимый тип указателя [-Wincompatible-pointer-types]
+  285 |         return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
+      |                          ^~~~
+      |                          |
+      |                          VALUE (*)(VALUE *) {aka long unsigned int (*)(long unsigned int *)}
+In file included from /usr/include/ruby.h:33,
+                 from nio4r.h:10,
+                 from selector.c:6:
+/usr/include/ruby/ruby.h:1990:17: замечание: ожидался тип «VALUE (*)(VALUE)» {aka «long unsigned int (*)(long unsigned int)»}, но аргумент имеет тип «VALUE (*)(VALUE *)» {aka «long unsigned int (*)(long unsigned int *)»}
+ 1990 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+selector.c: В функции «NIO_Selector_wakeup»:
+selector.c:483:5: предупреждение: ignoring return value of «write» declared with attribute «warn_unused_result» [-Wunused-result]
+  483 |     write(selector->wakeup_writer, "\0", 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rm -f nio4r_ext.so
+gcc -shared -o nio4r_ext.so bytebuffer.o monitor.o nio4r_ext.o selector.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld  -m64  -lruby  -lm   -lc
+
+current directory: /home/alex/.disk_a/Rails/GitHub/Google-Cloud-TTS-Rails/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.4/ext/nio4r
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20201014-9065-1o3cmf
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20201014-9065-1o3cmf
