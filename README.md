@@ -7,7 +7,7 @@
 Using the power of Google Cloud Text-to-Speech API and ruby here is a simple interface to convert text to speech.
 You only need key.json (API access key), put it in the root of this application. And that's really all.
 
-**Attention, this application supports SSML and three conversion formats: MP3 (MPEG Audio Layer III), WAV (LINEAR16) and OGG (OGG_OPUS).**
+**Attention, this application supports select TEXT or SSML, and three conversion formats: MP3 (MPEG Audio Layer III), WAV (LINEAR16) and OGG (OGG_OPUS).**
 
 Languages Google Cloud TTS Rails supports:
 - Deutsch (Deutschland)
