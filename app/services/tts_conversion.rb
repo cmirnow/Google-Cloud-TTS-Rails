@@ -11,6 +11,8 @@ class TtsConversion
   	case codec
   	when "LINEAR16"
   		'wav'
+    when "OGG_OPUS"
+      'ogg'
   	else
   		'mp3'
   	end
