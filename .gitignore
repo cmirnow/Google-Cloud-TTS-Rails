@@ -20,4 +20,5 @@
 
 .directory
 /public/output/*
+/vendor/bundle
 key.json
