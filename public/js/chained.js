@@ -68,6 +68,20 @@ function deactivateBoxes(s) {
 
 function generateOptions() {
 	return {
+		'da-DK': {
+			'WaveNet': {
+				'da-DK-Wavenet-A': null,
+				'da-DK-Wavenet-C': null,
+				'da-DK-Wavenet-D': null,
+				'da-DK-Wavenet-E': null
+			},
+			'Basic': {
+				'da-DK-Standard-A': null,
+				'da-DK-Standard-C': null,
+				'da-DK-Standard-D': null,
+				'da-DK-Standard-E': null
+			}
+		},
 		'de-DE': {
 			'WaveNet': {
 				'de-DE-WaveNet-F': null,
@@ -82,6 +96,50 @@ function generateOptions() {
 				'de-DE-Standard-A': null,
 				'de-DE-Standard-B': null,
 				'de-DE-Standard-F': null
+			}
+		},
+		'en-AU': {
+			'WaveNet': {
+				'en-AU-Wavenet-A': null,
+				'en-AU-Wavenet-B': null,
+				'en-AU-Wavenet-C': null,
+				'en-AU-Wavenet-D': null
+			},
+			'Basic': {
+				'en-AU-Standard-A': null,
+				'en-AU-Standard-B': null,
+				'en-AU-Standard-C': null,
+				'en-AU-Standard-D': null
+			}
+		},
+		'en-GB': {
+			'WaveNet': {
+				'en-GB-Wavenet-F': null,
+				'en-GB-Wavenet-A': null,
+				'en-GB-Wavenet-B': null,
+				'en-GB-Wavenet-C': null,
+				'en-GB-Wavenet-D': null
+			},
+			'Basic': {
+				'en-GB-Standard-A': null,
+				'en-GB-Standard-B': null,
+				'en-GB-Standard-C': null,
+				'en-GB-Standard-D': null,
+				'en-GB-Standard-F': null
+			}
+		},
+		'en-IN': {
+			'WaveNet': {
+				'en-IN-Wavenet-D': null,
+				'en-IN-Wavenet-A': null,
+				'en-IN-Wavenet-B': null,
+				'en-IN-Wavenet-C': null
+			},
+			'Basic': {
+				'en-IN-Standard-D': null,
+				'en-IN-Standard-A': null,
+				'en-IN-Standard-B': null,
+				'en-IN-Standard-C': null
 			}
 		},
 		'en-US': {
@@ -143,6 +201,20 @@ function generateOptions() {
 				'fr-FR-Standard-D': null
 			}
 		},
+		'it-IT': {
+			'WaveNet': {
+				'it-IT-Wavenet-A': null,
+				'it-IT-Wavenet-B': null,
+				'it-IT-Wavenet-C': null,
+				'it-IT-Wavenet-D': null
+			},
+			'Basic': {
+				'it-IT-Standard-A': null,
+				'it-IT-Standard-B': null,
+				'it-IT-Standard-C': null,
+				'it-IT-Standard-D': null
+			}
+		},
 		'nl-NL': {
 			'WaveNet': {
 				'nl-NL-WaveNet-B': null,
@@ -175,12 +247,42 @@ function generateOptions() {
 				'pl-PL-Standard-D': null
 			}
 		},
+		'pt-BR': {
+			'WaveNet': {
+				'pt-BR-Wavenet-A': null
+			},
+			'Basic': {
+				'pt-BR-Standard-A': null
+			}
+		},
+		'pt-PT': {
+			'WaveNet': {
+				'pt-PT-Wavenet-A': null,
+				'pt-PT-Wavenet-B': null,
+				'pt-PT-Wavenet-C': null,
+				'pt-PT-Wavenet-D': null
+			},
+			'Basic': {
+				'pt-PT-Standard-A': null,
+				'pt-PT-Standard-B': null,
+				'pt-PT-Standard-C': null,
+				'pt-PT-Standard-D': null
+			}
+		},
 		'fi-FI': {
 			'WaveNet': {
 				'fi-FI-WaveNet-A': null
 			},
 			'Basic': {
 				'fi-FI-Standard-A': null
+			}
+		},
+		'el-GR': {
+			'WaveNet': {
+				'el-GR-Wavenet-A': null
+			},
+			'Basic': {
+				'el-GR-Standard-A': null
 			}
 		},
 		'ru-RU': {
