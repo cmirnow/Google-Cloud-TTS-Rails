@@ -69,12 +69,16 @@
       <input type="radio" class="custom-control-input" id="ssml" value="ssml" name="text_or_ssml">
       <label class="custom-control-label" for="ssml">SSML</label>
    </div>
+   <div class="custom-control-inline">|</div>
+      <%= f.label 'Speaking rate', :required => false %>
+      <%= speaking_rate %>
 </div>
+
 <div id="btnSubmit" type="submit" class="btn btn-light">
    <%= f.button :submit, 'Send' %>
    <% end %>
 </div>
 </form>
 
-<script src="/js/chained.js"></script>
-<script src="/js/counter.js"></script>
+<%= javascript_include_tag 'chained' %>
+<%= javascript_include_tag 'counter' %>

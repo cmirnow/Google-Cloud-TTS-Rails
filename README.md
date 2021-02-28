@@ -9,6 +9,8 @@ You only need key.json (API access key), put it in the root of this application.
 
 **Attention, this application supports select TEXT or SSML, and three conversion formats: MP3 (MPEG Audio Layer III), WAV (LINEAR16) and OGG (OGG_OPUS).**
 
+28.02.2021 Added the ability to adjust the speech rate.
+
 Languages Google Cloud TTS Rails supports:
 - Dansk (Danmark)
 - Deutsch (Deutschland)

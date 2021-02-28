@@ -29,7 +29,7 @@ class SoundController < ApplicationController
   end
 
   def audio
-    { audio_encoding: params[:codec] }
+    { audio_encoding: params[:codec], speaking_rate: params[:speaking_rate].to_f }
   end
 
   def check
