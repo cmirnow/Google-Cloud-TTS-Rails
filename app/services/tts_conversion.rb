@@ -8,13 +8,13 @@ class TtsConversion
   end
 
   def self.audio_format(codec)
-  	case codec
-  	when "LINEAR16"
-  		'wav'
-    when "OGG_OPUS"
+    case codec
+    when 'LINEAR16'
+      'wav'
+    when 'OGG_OPUS'
       'ogg'
-  	else
-  		'mp3'
-  	end
+    else
+      'mp3'
+    end
   end
 end
