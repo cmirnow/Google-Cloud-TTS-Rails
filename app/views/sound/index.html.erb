@@ -13,7 +13,7 @@
 
 <div class="unobtrusive-flash-container"></div>
 
-<%= simple_form_for :user, remote: true, :url => '/sound/index', :method => :post do |f| %>
+<%= simple_form_for :user, remote: true, :method => :post do |f| %>
  <%= f.error_notification %>
   <%= f.input :request, placeholder: "Enter your text: ", :as => :text, input_html: { :style=> 'width: 70%;', :rows => 10, id: "body-field", name: "request", include_blank: false, required: true} %>
 
