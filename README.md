@@ -11,6 +11,8 @@ You only need key.json (API access key), put it in the root of this application.
 
 28.02.2021 Added the ability to adjust the speech rate.
 
+13.09.2021 Google-Cloud-Text-to-Speech-Pro (alpha version) is [available](https://github.com/cmirnow/Google-Cloud-Text-to-Speech-Pro). Test please.
+
 Languages Google Cloud TTS Rails supports:
 - Dansk (Danmark)
 - Deutsch (Deutschland)
