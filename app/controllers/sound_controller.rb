@@ -12,11 +12,13 @@ class SoundController < ApplicationController
   end
 
   def conversion
-    audio_format = TtsConversion.index(client,
-                                       synthesis_input,
-                                       voice,
-                                       audio,
-                                       params[:codec])
+    audio_format = TtsConversion.index(
+      client,
+      synthesis_input,
+      voice,
+      audio,
+      params[:codec]
+    )
     success_info(audio_format)
   end
 
