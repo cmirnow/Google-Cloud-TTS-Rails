@@ -2,17 +2,21 @@ class SoundController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    unless params[:request].nil?
-      if check.valid?
-        conversion
-      else
-        error_info
-      end
+    return if params[:request].nil?
+
+    if check.valid?
+      conversion
+    else
+      error_info
     end
   end
 
   def conversion
-    audio_format = TtsConversion.index(client, synthesis_input, voice, audio, params[:codec])
+    audio_format = TtsConversion.index(client,
+                                       synthesis_input,
+                                       voice,
+                                       audio,
+                                       params[:codec])
     success_info(audio_format)
   end
 
@@ -25,11 +29,13 @@ class SoundController < ApplicationController
   end
 
   def voice
-    { language_code: params[:lang], name: params[:voicename] }
+    { language_code: params[:lang],
+      name: params[:voicename] }
   end
 
   def audio
-    { audio_encoding: params[:codec], speaking_rate: params[:speaking_rate].to_f }
+    { audio_encoding: params[:codec],
+      speaking_rate: params[:speaking_rate].to_f }
   end
 
   def check
@@ -37,7 +43,8 @@ class SoundController < ApplicationController
   end
 
   def success_info(audio_format)
-    flash[:success] = "<a href='/output/output.#{audio_format}' download>Download #{audio_format}</a>".html_safe
+    flash[:success] = "<a href='/output/output.#{audio_format}'
+     download>Download #{audio_format}</a>".html_safe
   end
 
   def error_info
