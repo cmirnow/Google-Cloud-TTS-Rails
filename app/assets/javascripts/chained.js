@@ -68,6 +68,25 @@ function deactivateBoxes(s) {
 
 function generateOptions() {
 	return {
+		'ar-XA': {
+			'WaveNet': {
+				'ar-XA-Wavenet-A': null,
+				'ar-XA-Wavenet-B': null,
+				'ar-XA-Wavenet-C': null,
+				'ar-XA-Wavenet-D': null
+			},
+			'Basic': {
+				'ar-XA-Standard-A': null,
+				'ar-XA-Standard-B': null,
+				'ar-XA-Standard-C': null,
+				'ar-XA-Standard-D': null
+			}
+		},
+		'ca-ES': {
+			'Basic': {
+				'ca-es-Standard-A': null
+			}
+		},
 		'da-DK': {
 			'WaveNet': {
 				'da-DK-Wavenet-A': null,
@@ -215,6 +234,16 @@ function generateOptions() {
 				'it-IT-Standard-D': null
 			}
 		},
+		'lv-LV': {
+			'Basic': {
+				'lv-lv-Standard-A': null
+			}
+		},
+		'hu-HU': {
+			'Basic': {
+				'hu-HU-Standard-A': null
+			}
+		},
 		'nl-NL': {
 			'WaveNet': {
 				'nl-NL-WaveNet-B': null,
@@ -229,6 +258,22 @@ function generateOptions() {
 				'nl-NL-Standard-C': null,
 				'nl-NL-Standard-D': null,
 				'nl-NL-Standard-E': null
+			}
+		},
+		'nb-NO': {
+			'WaveNet': {
+				'nb-NO-Wavenet-A': null,
+				'nb-NO-Wavenet-B': null,
+				'nb-NO-Wavenet-C': null,
+				'nb-NO-Wavenet-D': null,
+				'nb-NO-Wavenet-E': null
+			},
+			'Basic': {
+				'nb-NO-Standard-A': null,
+				'nb-NO-Standard-B': null,
+				'nb-NO-Standard-C': null,
+				'nb-NO-Standard-D': null,
+				'nb-NO-Standard-E': null
 			}
 		},
 		'pl-PL': {
@@ -269,6 +314,14 @@ function generateOptions() {
 				'pt-PT-Standard-D': null
 			}
 		},
+		'ro-RO': {
+			'WaveNet': {
+				'ro-RO-Wavenet-A': null
+			},
+			'Basic': {
+				'ro-RO-Standard-A': null
+			}
+		},
 		'fi-FI': {
 			'WaveNet': {
 				'fi-FI-WaveNet-A': null
@@ -277,12 +330,30 @@ function generateOptions() {
 				'fi-FI-Standard-A': null
 			}
 		},
+		'is-IS': {
+			'Basic': {
+				'is-is-Standard-A': null
+			}
+		},
+		'cs-CZ': {
+			'WaveNet': {
+				'cs-CZ-Wavenet-A': null
+			},
+			'Basic': {
+				'cs-CZ-Standard-A': null
+			}
+		},
 		'el-GR': {
 			'WaveNet': {
 				'el-GR-Wavenet-A': null
 			},
 			'Basic': {
 				'el-GR-Standard-A': null
+			}
+		},
+		'bg-BG': {
+			'Basic': {
+				'bg-bg-Standard-A': null
 			}
 		},
 		'ru-RU': {
@@ -305,6 +376,20 @@ function generateOptions() {
 			},
 			'Basic': {
 				'uk-UA-Standard-A': null
+			}
+		},
+		'hi-IN': {
+			'WaveNet': {
+				'hi-IN-Wavenet-D': null,
+				'hi-IN-Wavenet-A': null,
+				'hi-IN-Wavenet-B': null,
+				'hi-IN-Wavenet-C': null
+			},
+			'Basic': {
+				'hi-IN-Standard-D': null,
+				'hi-IN-Standard-A': null,
+				'hi-IN-Standard-B': null,
+				'hi-IN-Standard-C': null
 			}
 		}
 	};

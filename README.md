@@ -14,6 +14,8 @@ You only need key.json (API access key), put it in the root of this application.
 13.09.2021 Google-Cloud-Text-to-Speech-Pro (alpha version) is [available](https://github.com/cmirnow/Google-Cloud-Text-to-Speech-Pro). Test please.
 
 Languages Google Cloud TTS Rails supports:
+- Arabic (multi-region)
+- Català (Espanya)
 - Dansk (Danmark)
 - Deutsch (Deutschland)
 - English (Australia)
@@ -24,14 +26,22 @@ Languages Google Cloud TTS Rails supports:
 - Français (Canada)
 - Français (France)
 - Italiano (Italia)
+- Latviešu (latviešu)
+- Magyar (Magyarország)
 - Nederlands (Nederland)
+- Norsk bokmål (Norge)
 - Polski (Polska)
 - Português (Brasil)
 - Português (Portugal)
+- Română (România)
 - Suomi (Suomi)
+- Íslenska (Ísland)
+- Čeština (Česká republika)
 - Ελληνικά (Ελλάδα)
+- Български (България)
 - Русский (Россия)
 - Українська (Україна)
+- हिन्दी (भारत)
 
 [Description](https://masterpro.ws/how-to-convert-text-to-speech-using-google-cloud-text-to-speech-api-and-ruby) (in Russian).
 
