@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.7.4'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>6.1.4'
@@ -42,6 +42,10 @@ gem 'google-cloud-text_to_speech'
 # gem 'unobtrusive_flash', '>=3'
 gem 'unobtrusive_flash', :path => 'vendor/gems/unobtrusive_flash-3.3.1'
 gem 'grpc', '1.31.1'
+
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
