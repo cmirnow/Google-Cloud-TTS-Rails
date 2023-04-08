@@ -115,6 +115,12 @@ function generateOptions() {
 				'de-DE-Standard-A': null,
 				'de-DE-Standard-B': null,
 				'de-DE-Standard-F': null
+			},
+			'Neural2': {
+				'de-DE-Neural2-B': null,
+				'de-DE-Neural2-C': null,
+				'de-DE-Neural2-D': null,
+				'de-DE-Neural2-F': null
 			}
 		},
 		'en-AU': {
@@ -122,13 +128,22 @@ function generateOptions() {
 				'en-AU-Wavenet-A': null,
 				'en-AU-Wavenet-B': null,
 				'en-AU-Wavenet-C': null,
-				'en-AU-Wavenet-D': null
+				'en-AU-Wavenet-D': null,
+				'en-AU-News-E': null,
+				'en-AU-News-F': null,
+				'en-AU-News-G': null
 			},
 			'Basic': {
 				'en-AU-Standard-A': null,
 				'en-AU-Standard-B': null,
 				'en-AU-Standard-C': null,
 				'en-AU-Standard-D': null
+			},
+			'Neural2': {
+				'en-AU-Neural2-A': null,
+				'en-AU-Neural2-B': null,
+				'en-AU-Neural2-C': null,
+				'en-AU-Neural2-D': null
 			}
 		},
 		'en-GB': {
@@ -137,7 +152,14 @@ function generateOptions() {
 				'en-GB-Wavenet-A': null,
 				'en-GB-Wavenet-B': null,
 				'en-GB-Wavenet-C': null,
-				'en-GB-Wavenet-D': null
+				'en-GB-Wavenet-D': null,
+				'en-GB-News-G': null,
+				'en-GB-News-H': null,
+				'en-GB-News-I': null,
+				'en-GB-News-J': null,
+				'en-GB-News-K': null,
+				'en-GB-News-L': null,
+				'en-GB-News-M': null
 			},
 			'Basic': {
 				'en-GB-Standard-A': null,
@@ -145,6 +167,13 @@ function generateOptions() {
 				'en-GB-Standard-C': null,
 				'en-GB-Standard-D': null,
 				'en-GB-Standard-F': null
+			},
+			'Neural2': {
+				'en-GB-Neural2-A': null,
+				'en-GB-Neural2-B': null,
+				'en-GB-Neural2-C': null,
+				'en-GB-Neural2-D': null,
+				'en-GB-Neural2-F': null
 			}
 		},
 		'en-IN': {
@@ -172,7 +201,11 @@ function generateOptions() {
 				'en-US-WaveNet-C': null,
 				'en-US-WaveNet-D': null,
 				'en-US-WaveNet-E': null,
-				'en-US-WaveNet-F': null
+				'en-US-WaveNet-F': null,
+				'en-US-News-K': null,
+				'en-US-News-L': null,
+				'en-US-News-M': null,
+				'en-US-News-N': null
 			},
 			'Basic': {
 				'en-US-Standard-B': null,
@@ -183,11 +216,42 @@ function generateOptions() {
 				'en-US-Standard-H': null,
 				'en-US-Standard-I': null,
 				'en-US-Standard-J': null
+			},
+			'Neural2': {
+				'en-US-Neural2-A': null,
+				'en-US-Neural2-C': null,
+				'en-US-Neural2-D': null,
+				'en-US-Neural2-E': null,
+				'en-US-Neural2-F': null,
+				'en-US-Neural2-G': null,
+				'en-US-Neural2-H': null,
+				'en-US-Neural2-I': null,
+				'en-US-Neural2-J': null
+			},
+			'Studio': {
+				'en-US-Studio-M': null,
+				'en-US-Studio-O': null
 			}
 		},
 		'es-ES': {
 			'Basic': {
-				'es-ES-Standard-A': null
+				'es-ES-Standard-A': null,
+				'es-ES-Standard-B': null,
+				'es-ES-Standard-C': null,
+				'es-ES-Standard-D': null
+			},
+			'WaveNet': {
+				'es-ES-WaveNet-B': null,
+				'es-ES-WaveNet-C': null,
+				'es-ES-WaveNet-D': null
+			},
+			'Neural2': {
+				'es-ES-Neural2-A': null,
+				'es-ES-Neural2-B': null,
+				'es-ES-Neural2-C': null,
+				'es-ES-Neural2-D': null,
+				'es-ES-Neural2-E': null,
+				'es-ES-Neural2-F': null
 			}
 		},
 		'fr-CA': {
@@ -202,6 +266,12 @@ function generateOptions() {
 				'fr-CA-Standard-B': null,
 				'fr-CA-Standard-C': null,
 				'fr-CA-Standard-D': null
+			},
+			'Neural2': {
+				'fr-CA-Neural2-A': null,
+				'fr-CA-Neural2-B': null,
+				'fr-CA-Neural2-C': null,
+				'fr-CA-Neural2-D': null
 			}
 		},
 		'fr-FR': {
@@ -218,6 +288,13 @@ function generateOptions() {
 				'fr-FR-Standard-B': null,
 				'fr-FR-Standard-C': null,
 				'fr-FR-Standard-D': null
+			},
+			'Neural2': {
+				'fr-FR-Neural2-A': null,
+				'fr-FR-Neural2-B': null,
+				'fr-FR-Neural2-C': null,
+				'fr-FR-Neural2-D': null,
+				'fr-FR-Neural2-E': null
 			}
 		},
 		'it-IT': {
@@ -232,6 +309,10 @@ function generateOptions() {
 				'it-IT-Standard-B': null,
 				'it-IT-Standard-C': null,
 				'it-IT-Standard-D': null
+			},
+			'Neural2': {
+				'it-IT-Neural2-A': null,
+				'it-IT-Neural2-C': null
 			}
 		},
 		'lv-LV': {
@@ -294,10 +375,19 @@ function generateOptions() {
 		},
 		'pt-BR': {
 			'WaveNet': {
-				'pt-BR-Wavenet-A': null
+				'pt-BR-Wavenet-A': null,
+				'pt-BR-Wavenet-B': null,
+				'pt-BR-Wavenet-C': null
 			},
 			'Basic': {
-				'pt-BR-Standard-A': null
+				'pt-BR-Standard-A': null,
+				'pt-BR-Standard-B': null,
+				'pt-BR-Standard-C': null
+			},
+			'Neural2': {
+				'pt-BR-Neural2-A': null,
+				'pt-BR-Neural2-B': null,
+				'pt-BR-Neural2-C': null
 			}
 		},
 		'pt-PT': {
@@ -390,6 +480,12 @@ function generateOptions() {
 				'hi-IN-Standard-A': null,
 				'hi-IN-Standard-B': null,
 				'hi-IN-Standard-C': null
+			},
+			'Neural2': {
+				'hi-IN-Neural2-A': null,
+				'hi-IN-Neural2-B': null,
+				'hi-IN-Neural2-C': null,
+				'hi-IN-Neural2-D': null
 			}
 		}
 	};
