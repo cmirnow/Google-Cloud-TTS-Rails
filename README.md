@@ -9,9 +9,15 @@ You only need key.json (API access key), put it in the root of this application.
 
 **Attention, this application supports select TEXT or SSML, and three conversion formats: MP3 (MPEG Audio Layer III), WAV (LINEAR16) and OGG (OGG_OPUS).**
 
+***
+
+08.04.2023 Added Neural2, Studio and WaveNet (News) voices.
+
 28.02.2021 Added the ability to adjust the speech rate.
 
 13.09.2021 Google-Cloud-Text-to-Speech-Pro is [available](https://github.com/cmirnow/Google-Cloud-Text-to-Speech-Pro). Test please.
+
+***
 
 Languages Google Cloud TTS Rails supports:
 - Arabic (multi-region)
