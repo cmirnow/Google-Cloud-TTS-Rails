@@ -11,6 +11,8 @@ You only need key.json (API access key), put it in the root of this application.
 
 ***
 
+09.04.2023 Added Spanish (US) and Japanese (Japan) voices.
+
 08.04.2023 Added Neural2, Studio and WaveNet (News) voices.
 
 28.02.2021 Added the ability to adjust the speech rate.
@@ -29,9 +31,11 @@ Languages Google Cloud TTS Rails supports:
 - English (India)
 - English (United States)
 - Español (España)
+- Español (US)
 - Français (Canada)
 - Français (France)
 - Italiano (Italia)
+- Japanese (Japan)
 - Latviešu (latviešu)
 - Magyar (Magyarország)
 - Nederlands (Nederland)
@@ -49,7 +53,4 @@ Languages Google Cloud TTS Rails supports:
 - Українська (Україна)
 - हिन्दी (भारत)
 
-[Description](https://masterpro.ws/how-to-convert-text-to-speech-using-google-cloud-text-to-speech-api-and-ruby) (in Russian).
-
 For Beginners. How to Start. [Deploying Google-Cloud-TTS-Rails with Heroku](https://masterpro.ws/deploying-google-cloud-tts-rails-with-heroku) (in English). If this is a problem, I can do it for you. Take a look at the link!
-
