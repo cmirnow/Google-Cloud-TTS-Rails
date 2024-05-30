@@ -35,11 +35,11 @@ gem 'simple_form'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise'
-gem 'dotenv-rails', :require => 'dotenv/rails-now'
+gem 'dotenv-rails', :require => 'dotenv/load'
 gem 'google-cloud-text_to_speech'
 # gem 'unobtrusive_flash', '>=3'
 gem 'unobtrusive_flash', :path => 'vendor/gems/unobtrusive_flash-3.3.1'
-gem 'grpc', '1.31.1'
+gem 'grpc', '1.64.0'
 
 gem 'net-smtp', require: false
 gem 'net-imap', require: false
